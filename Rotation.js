@@ -7,12 +7,12 @@ AFRAME.registerComponent("terrain-rotation-reader", {
     window.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") {
         if (this.data.speedOfRotation < 0.1) {
-          this.data.speedOfRotation += 0.1;
+          this.data.speedOfRotation += 0.3;
         }
       }
       if (e.key === "ArrowLeft") {
         if (this.data.speedOfRotation > -0.1) {
-          this.data.speedOfRotation -= 0.1;
+          this.data.speedOfRotation -= 0.3;
         }
       }
     });
@@ -44,7 +44,7 @@ AFRAME.registerComponent('plane-rotation-reader', {
 
       if(e.key === 'ArrowRight')
       {
-        if(plane_rotation.z < 40)
+        if(plane_rotation.z < 50)
         {
           plane_rotation.z += 7
           this.el.setAttribute("rotation", plane_rotation);
@@ -53,7 +53,7 @@ AFRAME.registerComponent('plane-rotation-reader', {
 
       if(e.key === 'ArrowLeft')
       {
-        if(plane_rotation.z > -40)
+        if(plane_rotation.z > -50)
         {
           plane_rotation.z -= 7;
           this.el.setAttribute("rotation", plane_rotation);
